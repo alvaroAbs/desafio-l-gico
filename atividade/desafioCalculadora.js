@@ -1,25 +1,28 @@
-let saldoVitoria = calculo(100,30) 
-let frase = "O heroi tem de saldo de "+ saldoVitoria + " esta no nivel "
-
-function calculo(num1,num2){
-    return num1- num2
+let vitorias = 100
+let derrotas = 30
+let saldoVitoria = calculo(vitorias,derrotas)
+let nivel = ""
+function calculo(vitorias,derrotas){
+    return vitorias- derrotas
 }
 
 
 if (saldoVitoria <=10){
-    console.log( frase + "ferro")
+    nivel = "ferro"
 } else if (saldoVitoria >= 11 && saldoVitoria <= 20){
-    console.log(frase + "Bronze")
+    nivel = "bronze"
 } else if (saldoVitoria >= 21 && saldoVitoria <= 50){
-    console.log(frase + "Prata")
+    nivel = "Prata"
 }else if (saldoVitoria >= 51 && saldoVitoria <= 70){
-    console.log(frase + "Ouro")
+    nivel = "Ouro"
 }else if (saldoVitoria >= 71 && saldoVitoria <= 80){
-    console.log(frase + "platina")
+    nivel = "Diamante"
 }else if (saldoVitoria >= 81 && saldoVitoria <= 90){
-    console.log(frase + "Ascendente")
+        nivel = "Ascendente"
 }else if (saldoVitoria >= 91 && saldoVitoria <= 100){
-    console.log(frase + "Imortal")
+        nivel = "Imortal"
 } else {
-    console.log(frase + "Radiante")
+        nivel = "Radiante"
 }
+
+console.log ("O Heroi tem de saldo " + saldoVitoria + " está no nível de " + nivel)
